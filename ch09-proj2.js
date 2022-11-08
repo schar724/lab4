@@ -2,9 +2,7 @@
 
 document.addEventListener("DOMContentLoaded", function () {
 
-    fetch("paintings.json")
-        .then(res => res.json())
-        .then(paintings => {
+    const paintings = JSON.parse(content)
 
             const ul = document.querySelector("#paintings ul")
             for (let p of paintings) {
@@ -53,12 +51,6 @@ document.addEventListener("DOMContentLoaded", function () {
                     }
                 }
             })
-
-
-
-        })
-
-
 })
 
 
